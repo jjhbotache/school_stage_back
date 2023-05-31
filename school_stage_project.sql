@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-05-2023 a las 21:41:53
+-- Tiempo de generación: 31-05-2023 a las 22:01:27
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.0.25
 
@@ -125,7 +125,8 @@ INSERT INTO `pucharse_orders` (`id`, `id_wine`, `id_design`, `id_real_design`, `
 (51, 2, 30, 0, ' Wanted sentence Juli como no te voy a odiar perra', 1, 3, '2023-06-01', 'Ibague Tolima Calle 13 #7-82', 1106226952, 'vaucher/WhatsApp Image 2023-05-11 at 10.04.27.jpeg', 1, 0),
 (52, 2, 25, 0, 'null', 1, 3, '2023-06-01', 'Ibague Tolima Calle 13 #7-82', 1106226952, 'vaucher/cargador cel.jpg', 1, 0),
 (53, 6, 26, 7, 'null', 1, 1, '2023-05-30', 'a mi casa', 1106226952, 'vaucher/asdasdasda.png', 4, 1),
-(54, 8, 30, 8, ' Wanted sentence Juli como no te voy a querer si dices puras pendejadas igual que SU MAMA HPTA', 1, 2, '2023-05-30', 'a mi casa', 1106226952, 'vaucher/Que-todo-lo-bueno-te-siga,-te-encuentra-y-se-quede-contigo.-Feliz-Cumpleaños.png', 2, 1);
+(54, 8, 30, 8, ' Wanted sentence Juli como no te voy a querer si dices puras pendejadas igual que SU MAMA HPTA', 1, 2, '2023-05-30', 'a mi casa', 1106226952, 'vaucher/Que-todo-lo-bueno-te-siga,-te-encuentra-y-se-quede-contigo.-Feliz-Cumpleaños.png', 2, 1),
+(55, 2, 29, 9, ' Wanted sentence drink wine feel mine', 1, 3, '2023-06-05', 'Ibague Tolima Calle 13 #7-82', 1106226952, 'vaucher/Captura de pantalla 2023-03-03 072839.png', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -147,7 +148,8 @@ CREATE TABLE `real_designs` (
 INSERT INTO `real_designs` (`id`, `name`, `img`, `dxf`) VALUES
 (5, '20 pero a que costo ?', 'img/20-pero-a-que-costo_REAL_DESIGN.png', 'dxf/20-pero-a-que-costo_REAL_DESIGN.dxf'),
 (7, 'vuela alto', 'img/vuela-alto_REAL_DESIGN.png', 'dxf/vuela-alto_REAL_DESIGN.dxf'),
-(8, 'brilla-mas-que-nunca-hoy-es-tu-dia', 'img/brilla-mas-que-nunca-hoy-es-tu-dia_REAL_DESIGN.png', 'dxf/brilla-mas-que-nunca-hoy-es-tu-dia_REAL_DESIGN.dxf');
+(8, 'brilla-mas-que-nunca-hoy-es-tu-dia', 'img/brilla-mas-que-nunca-hoy-es-tu-dia_REAL_DESIGN.png', 'dxf/brilla-mas-que-nunca-hoy-es-tu-dia_REAL_DESIGN.dxf'),
+(9, 'Captura de pantalla 2023-03-03 082352', 'img/Captura_de_pantalla_2023-03-03_082352_REAL_DESIGN.png', 'dxf/Captura_de_pantalla_2023-03-03_082352_REAL_DESIGN.dxf');
 
 -- --------------------------------------------------------
 
@@ -375,13 +377,13 @@ ALTER TABLE `packing_colors`
 -- AUTO_INCREMENT de la tabla `pucharse_orders`
 --
 ALTER TABLE `pucharse_orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT de la tabla `real_designs`
 --
 ALTER TABLE `real_designs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `secondary_packing_colors`

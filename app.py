@@ -59,14 +59,15 @@ CORS(app)
 class Data_base:
     def __init__(self):
         self.connection = pymysql.connect(
-            host="localhost",
-            user="root",
-            password="J1234567890j",
-            database="school_stage_project"  
-            # host="sql10.freemysqlhosting.net",
-            # user="sql10612108",
+            # host="localhost",
+            # user="root",
             # password="J1234567890j",
-            # database="sql10612108"  
+            # database="school_stage_project"  
+            
+            host="sql107.epizy.com",
+            user="epiz_34329071",
+            password="J1234567890j",
+            database="epiz_34329071_memorable_db"  
         )
         self.cursor = self.connection.cursor()
         
@@ -878,9 +879,9 @@ def get_pick_up_adress():
 
     
 
-# if __name__ == "__main__":
-#     app.run()
+if __name__ == "__main__":
+    app.run()
 
-if __name__ == '__main__':
-    from waitress import serve
-    serve(app, host='0.0.0.0', port=8000)
+# if __name__ == '__main__':
+#     from waitress import serve
+#     serve(app, host='0.0.0.0', port=1000)
