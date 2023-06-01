@@ -64,10 +64,12 @@ class Data_base:
             # password="J1234567890j",
             # database="school_stage_project"  
             
-            host="sql107.epizy.com",
-            user="epiz_34329071",
+            
+            host="db4free.net",
+            port=3306,
+            user="jjhbjjhb",
             password="J1234567890j",
-            database="epiz_34329071_memorable_db"  
+            database="db_memorable"  
         )
         self.cursor = self.connection.cursor()
         
@@ -879,9 +881,9 @@ def get_pick_up_adress():
 
     
 
-# if __name__ == "__main__":
-#     app.run()
+if __name__ == "__main__":
+    app.run(port=1000)
 
-if __name__ == '__main__':
-    from waitress import serve
-    serve(app, host='0.0.0.0', port=1000)
+# if __name__ == '__main__':
+#     from waitress import serve
+#     serve(app, host='0.0.0.0', port=1000)
