@@ -113,7 +113,7 @@ class Data_base:
             data = self.cursor.fetchall()
             print(data)
             formated_data = []
-            os.system("cls")
+            # os.system("cls")
             for row in data:
                 formated_data.append(
                     {
@@ -136,7 +136,7 @@ class Data_base:
             data = self.cursor.fetchall()
             print(data)
             formated_data = []
-            os.system("cls")
+            # os.system("cls")
             for row in data:
                 formated_data.append(
                     {
