@@ -334,13 +334,13 @@ def update_design(id,field):
             img.save(route_img)
         
         if field == "ai":
-        print("changing img")
-        conn = Data_base()
-        designs = conn.get_all_designs()
-        route_ai = list(filter(lambda design : design["id"]==id, designs))[0]["ai_url"]
-        ai = request.files["ai"]
-        os.remove(route_ai)
-        ai.save(route_ai)
+            print("changing img")
+            conn = Data_base()
+            designs = conn.get_all_designs()
+            route_ai = list(filter(lambda design : design["id"]==id, designs))[0]["ai_url"]
+            ai = request.files["ai"]
+            os.remove(route_ai)
+            ai.save(route_ai)
         return jsonify({"msg":"updated succesfully"})    
     except Exception as e:
         return jsonify({"msg":f"An exception occurred: {e}"})
