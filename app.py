@@ -316,23 +316,24 @@ def get_designs():
 @app.route("/update_design/<int:id>/<string:field>", methods=["POST"])
 @locked_route
 def update_design(id,field):
-    if field == "name":
-        data = request.get_json()["new_data"]
-        conn = Data_base()
-        conn.update_design(id,field,data)
+    try:
+        if field == "name":
+            data = request.get_json()["new_data"]
+            conn = Data_base()
+            conn.update_design(id,field,data)
+            
+        if field == "img":
+            print("changing img")
+            conn = Data_base()
+            designs = conn.get_all_designs()
+            route_img = list(filter(lambda design : design["id"]==id, designs))[0]["img_url"]
+            print("changing the img at ",route_img)
+            
+            img = request.files["img"]
+            os.remove(route_img)
+            img.save(route_img)
         
-    if field == "img":
-        print("changing img")
-        conn = Data_base()
-        designs = conn.get_all_designs()
-        route_img = list(filter(lambda design : design["id"]==id, designs))[0]["img_url"]
-        print("changing the img at ",route_img)
-        
-        img = request.files["img"]
-        os.remove(route_img)
-        img.save(route_img)
-    
-    if field == "ai":
+        if field == "ai":
         print("changing img")
         conn = Data_base()
         designs = conn.get_all_designs()
@@ -340,10 +341,9 @@ def update_design(id,field):
         ai = request.files["ai"]
         os.remove(route_ai)
         ai.save(route_ai)
-    # try:
-    #     return jsonify({"msg":"updated succesfully"})    
-    # except Exception as e:
-    #     return jsonify({"msg":f"An exception occurred: {e}"})
+        return jsonify({"msg":"updated succesfully"})    
+    except Exception as e:
+        return jsonify({"msg":f"An exception occurred: {e}"})
     
 @app.route("/update_real_design/<int:id>/<string:field>", methods=["POST"])
 @locked_route
