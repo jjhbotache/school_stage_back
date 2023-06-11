@@ -723,7 +723,6 @@ def update_user():
 @app.route("/user/read/<string:table>/<int:id>")
 @locked_route_for_anyone
 def read_user(table,id):
-    # return jsonify({"msg":"not working endpoint yet"})
     allowed_tables=[
         "real_designs",
     ]
@@ -750,7 +749,12 @@ def insert_user(table):
         if table == "pucharse_orders":
             # get the actual date and add it 4 able days
             data["delivery_date"] = "'"+add_business_days(4)+"'"
+            data["paid"] = 0
             
+            print(f'''
+                  data:
+                  {data}
+                  ''')
             conn.create(table,data)
         else:
             conn.create(table,data)
@@ -777,9 +781,14 @@ def insert_user(table):
 #     else:
 #       raise Exception
  
-@app.route("/delete-voucher-file/<string:route>",methods=["DELETE"])
+@app.route("/delete-voucher-file",methods=["DELETE"])
 @locked_route_for_anyone
-def delete_voucher(route):
+def delete_voucher():
+    #get the route from the json sended
+    route = request.get_json()["route"]
+    print("route:",route)
+    # delete the file
+    
     os.remove(route)
     return jsonify({"msg":"deleted successfully"})
  
