@@ -5,8 +5,8 @@ from email.mime.application import MIMEApplication
 
 def send_mail(recipient,title,body):
   # Definir las credenciales
-  sender = "sapohpta4@gmail.com"
-  password = "kskpstxsvhizibbg"
+  sender = "jjhuertasbotache3@gmail.com"
+  password = "|||V3|2t4cc3|"
 
   # Definir los detalles del destinatario
   
